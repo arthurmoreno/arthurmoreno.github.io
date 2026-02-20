@@ -1,0 +1,104 @@
+.viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0; /* remove extra vertical padding so slides can fill the area */
+  /* fill most of the viewport minus header area so the slate reaches further down */
+  /* use min-height so the slate can shrink to content and avoid large white gaps */
+  min-height: calc(100vh - 120px);
+  background: #0e0e0e; /* ensure viewport background matches slides so no white gap shows */
+  width: 100vw; /* expand to full viewport width so slides are not constrained by the container */
+  margin-left: calc(50% - 50vw); /* center the full-bleed viewport inside the page container */
+}
+
+.slider {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.slate {
+  scroll-snap-align: start;
+  flex: 0 0 100vw; /* each slide fills the viewport width */
+  box-sizing: border-box;
+  /* ensure each slate fills the viewport height area without relying on percent heights */
+  min-height: calc(100vh - 120px);
+  background: #0e0e0e;
+  color: #eee;
+  border: 4px solid #333;
+  box-shadow: 14px 14px 0px rgba(0,0,0,0.9);
+  padding: 28px 48px; /* wider horizontal padding for large displays */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.thumb {
+  width: 55%;
+  /* let thumb scale naturally and cap its height to avoid overflow / layout jumps */
+  aspect-ratio: 16/9;
+  height: auto;
+  min-height: 220px;
+  max-height: calc(100vh - 200px);
+  background-size: contain; /* show entire image */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 28px;
+  border: 2px solid rgba(255,255,255,0.04);
+}
+
+.content {
+  width: 45%;
+}
+
+.engineTag {
+  font-size: 12px;
+  color: #bfbfbf;
+  margin-bottom: 8px;
+}
+
+.desc {
+  margin-top: 12px;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.content h2 {
+  font-size: 34px;
+  margin: 0 0 8px 0;
+}
+
+.content p {
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 12px 0;
+}
+
+.controls button {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.counter {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* hide scrollbar lightly */
+.viewport::-webkit-scrollbar { display: none; }
+.viewport { -ms-overflow-style: none; scrollbar-width: none; }

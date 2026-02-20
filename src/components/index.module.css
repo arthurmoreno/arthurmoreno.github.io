@@ -52,3 +52,154 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+/* Hero tweaks */
+.hero {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.heroHeading {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--font-xxl);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.actionButton {
+  background: #6b21a8;
+  color: white;
+  padding: 0.8rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.secondaryButton {
+  background: #4c1d95;
+}
+
+.socialLinks {
+  margin-top: var(--space-4);
+  color: inherit;
+}
+
+/* Portfolio intro section that sits between hero and project slate */
+.portfolioIntro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+}
+
+.portfolioIntro h3 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 1.25rem;
+}
+
+.portfolioIntro p {
+  margin: 0 auto;
+  max-width: 64ch;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Experiences cards */
+.experiencesSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.experiencesHeading {
+  font-size: var(--font-xxl);
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-text);
+}
+
+.experiencesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.expCard {
+  background: var(--color-bg-alt, #12121200);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.expTop {
+  height: 72px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.expLogo {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  top: 28px;
+  margin: 0 auto;
+  box-shadow: 0 6px 14px rgba(2,6,23,0.45);
+}
+
+.expBody {
+  padding: 56px 28px 28px;
+  text-align: center;
+  color: var(--color-text);
+  flex: 1 1 auto;
+}
+
+.expCompany {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.expRole {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.expDates {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+}
+
+.expDesc {
+  margin: 0 auto 12px auto;
+  max-width: 44ch;
+  line-height: 1.6;
+}
+
+.expList {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 44ch;
+}
+
+.logo-blue { background: linear-gradient(180deg,#0b7cd1,#0764b0); }
+.logo-red { background: linear-gradient(180deg,#b83232,#8f2323); }
+.logo-pink { background: linear-gradient(180deg,#f06e7f,#d55a66); }
+
